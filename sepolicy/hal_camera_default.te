@@ -3,7 +3,7 @@ allow hal_camera_default camera_param_file:file { lock getattr read open };
 allow hal_camera_default proc_camera_module:file { read open getattr };
 allow hal_camera_default proc_asus_debug:file { append open getattr };
 
-allow hal_camera_default dit_socket:dir getattr;
+allow hal_camera_default dit_socket:dir { getattr search };
 allow hal_camera_default dit_socket:sock_file write;
 
 allow hal_camera_default mm-qcamerad:unix_stream_socket connectto;
